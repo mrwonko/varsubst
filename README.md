@@ -4,5 +4,5 @@ I am using it to parameterize Kubernetes configuration files. I did not want to 
 
 Like this:
 ```bash
-> varsubst < rc-controller.tmpl.yaml > rc-controller.yaml
+varsubst < rc-controller.tmpl.yaml > rc-controller.yaml
 ```
