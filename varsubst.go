@@ -17,7 +17,7 @@ func Scan(reader io.Reader) string {
 		return ""
 	}
 	return envVarRegexp.ReplaceAllStringFunc(string(input), func(placeholder string) string {
-		name := placeholder[2 : len(placeholder)-1] // drop $( and )
+		name := placeholder[2 : len(placeholder)-1] // drop ${ and }
 		if varvalue := os.Getenv(name); varvalue != "" {
 			return varvalue
 		}
